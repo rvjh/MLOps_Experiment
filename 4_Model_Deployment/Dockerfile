@@ -1,10 +1,10 @@
 FROM python:3.9-slim
 
-RUN pip freeze > requirements.txt
-
 WORKDIR /app
 
-COPY ["predict.py","test.py","web_service/lin_reg.bin","./"]
+COPY ["requirements.txt","predict.py","test.py","lin_reg.bin","./"]
+
+RUN pip install -r requirements.txt
 
 EXPOSE 9696
 
