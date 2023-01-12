@@ -1,0 +1,5 @@
+pandas
+scikit-learn
+pytest
+prefect==2.0b5
+mlflow
